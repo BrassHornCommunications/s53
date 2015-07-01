@@ -1,0 +1,4 @@
+# This udev file assumes you are using the reference freetronics LeoStick arduino clone board
+# Other boards will require tweaking
+# It also assume you've placed the correct script in the path referenced >----------------------------------------+
+ACTION=="remove", KERNEL=="ttyACM*", ATTRS{idVendor}=="26ba", ATTRS{idProduct}=="8002",  RUN+="/var/lib/s53/trigger.sh"
